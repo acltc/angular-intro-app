@@ -9,5 +9,17 @@
     <div>
       <input ng-model="purpleHippo">
     </div>
+
+    <ul>
+      <li ng-repeat="review in reviews">{{ review }}
+        <!-- <input ng-model="review"> -->
+      </li>
+    </ul>
+
+    <h4>Leave your own review of AngularJS</h4>
+    <input ng-model="newReview">
+    <button ng-click="addReview(newReview)">Add Review</button>
+
+
   </div>
 </div>
