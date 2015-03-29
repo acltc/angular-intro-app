@@ -10,15 +10,18 @@
       <input ng-model="purpleHippo">
     </div>
 
-    <ul>
-      <li ng-repeat="review in reviews">{{ review }}
-        <!-- <input ng-model="review"> -->
-      </li>
-    </ul>
+    <div ng-repeat="review in reviews" >  <h4>{{ review.reviewer }}</h4>
+      <h5>Stars: {{ review.stars }}</h5>
+      <p>{{ review.text }}</p>
+    </div>
 
-    <h4>Leave your own review of AngularJS</h4>
-    <input ng-model="newReview">
-    <button ng-click="addReview(newReview)">Add Review</button>
+    <div id="form">
+      <h4>Leave your own review of AngularJS</h4>
+      Your name:<input ng-model="newReviewName">
+      Number of Stars:<input ng-model="newReviewStars">
+      Review:<input ng-model="newReviewText">
+      <button ng-click="addReview(newReviewName, newReviewStars, newReviewText)">Add Review</button>
+    </div>
 
 
   </div>
